@@ -1,0 +1,2 @@
+SELECT * FROM public.daikin_delivery_schedule
+ORDER BY order_date, wh_order_no;

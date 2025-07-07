@@ -1,0 +1,11 @@
+UPDATE public.daikin_delivery_schedule
+  SET
+    wh_despatch_date = {{ WH_Dispatch_Date.selectedDate ? `'${WH_Dispatch_Date.selectedDate}'` : NULL }},
+    delivery_notes = {{ Delivery_Notes.text ? `'${Delivery_Notes.text}'` : NULL }},
+    despatch_confirmed = {{ ConfirmSwitch.isSwitchedOn }},
+    date_despatch_confirmed = 
+      CASE
+        WHEN {{ ConfirmSwitch.isSwitchedOn }} = true THEN now()
+        ELSE NULL
+      END
+WHERE id = {{ Daikin_Delivery_Schedule.triggeredRow.id }};

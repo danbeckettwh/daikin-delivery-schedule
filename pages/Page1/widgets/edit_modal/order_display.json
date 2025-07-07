@@ -1,0 +1,55 @@
+{
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 16,
+  "dynamicBindingPathList": [
+    {
+      "key": "truncateButtonColor"
+    },
+    {
+      "key": "fontFamily"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "text"
+    }
+  ],
+  "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicTriggerPathList": [],
+  "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
+  "fontSize": "1rem",
+  "fontStyle": "BOLD",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "f7zg6iw33z",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 4,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 16,
+  "mobileTopRow": 0,
+  "needsErrorInfo": false,
+  "originalBottomRow": 16,
+  "originalTopRow": 0,
+  "overflow": "NONE",
+  "parentColumnSpace": 19.228125,
+  "parentId": "gd89vvxbgt",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 62,
+  "shouldTruncate": false,
+  "text": "{{\n  (data => {\n    // --- Safety Check: This function will only run if 'data' is not null or undefined. ---\n    if (!data) {\n      return \"Loading item details...\";\n    }\n\n    // --- Helper function for consistent date formatting ---\n    const formatDate = (dateString) => {\n      if (!dateString) return \"N/A\";\n      const date = new Date(dateString);\n      // Check if the date is valid before formatting\n      return !isNaN(date.getTime()) ? date.toLocaleDateString('en-GB') : \"Invalid Date\";\n    };\n    \n    // --- Build the main HTML output using the same style as your main app ---\n    let htmlOutput = `<div style=\"font-size: 0.9rem; line-height: 1.5;\">`;\n    \n    // --- Header: Order, PO, and Date ---\n    htmlOutput += `<h3 style=\"margin-top: 0; margin-bottom: 15px;\"><strong style=\"color: #83a946;\">Order:</strong> ${data.wh_order_no} | <strong style=\"color: #83a946;\">PO:</strong> ${data.daikin_order_no || 'N/A'} | <strong style=\"color: #83a946;\">Date:</strong> ${formatDate(data.order_date)}</h3>`;\n\n    // --- Two-Column Layout Table ---\n    htmlOutput += `<table style=\"width: 100%; border-collapse: collapse;\"><tbody><tr style=\"vertical-align: top;\">`;\n    \n    // Column 1\n    htmlOutput += `<td style=\"width: 50%; padding-right: 15px;\">`;\n    htmlOutput += `<p style=\"margin-top: 0; margin-bottom: 10px;\"><strong style=\"color: #83a946;\">Product Code:</strong><br>${data.product_code || 'N/A'}</p>`;\n    htmlOutput += `<p style=\"margin-bottom: 10px;\"><strong style=\"color: #83a946;\">Barcode:</strong><br>${data.barcode_number || 'N/A'}</p>`;\n    htmlOutput += `</td>`;\n\n    // Column 2\n    htmlOutput += `<td style=\"width: 50%;\">`;\n    htmlOutput += `<p style=\"margin-top: 0; margin-bottom: 10px;\"><strong style=\"color: #83a946;\">Quantity Ordered:</strong><br>${data.qty_ordered || 0}</p>`;\n    htmlOutput += `<p style=\"margin-bottom: 10px;\"><strong style=\"color: #83a946;\">Quantity Despatched:</strong><br>${data.qty_despatched || 0}</p>`;\n    htmlOutput += `</td>`;\n\n    htmlOutput += `</tr></tbody></table>`;\n    htmlOutput += `</div>`; // Close the main container div\n\n    return htmlOutput;\n\n  // --- Pass the triggered row data into our function, using the correct table widget name ---\n  })(Daikin_Delivery_Schedule.triggeredRow)\n}}\n",
+  "textAlign": "LEFT",
+  "textColor": "#231F20",
+  "topRow": 0,
+  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "type": "TEXT_WIDGET",
+  "version": 1,
+  "widgetId": "nc2ev1xto4",
+  "widgetName": "order_display"
+}
