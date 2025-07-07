@@ -1,0 +1,4 @@
+UPDATE public.daikin_delivery_schedule
+  SET
+    is_archived = TRUE
+WHERE id = {{ Daikin_Delivery_Schedule.triggeredRow.id }};

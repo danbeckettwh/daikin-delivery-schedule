@@ -1,6 +1,6 @@
 {
   "gitSyncId": "686bbf135dd1861a2c0bf90b_be877027-54d8-4fcf-b101-b3c07f194576",
-  "id": "Page1_get_schedule",
+  "id": "Daikin Delivery Schedule_get_schedule",
   "pluginId": "postgres-plugin",
   "pluginType": "DB",
   "unpublishedAction": {
@@ -24,7 +24,7 @@
     },
     "dynamicBindingPathList": [],
     "name": "get_schedule",
-    "pageId": "Page1",
+    "pageId": "Daikin Delivery Schedule",
     "runBehaviour": "ON_PAGE_LOAD",
     "userSetOnLoad": true
   }

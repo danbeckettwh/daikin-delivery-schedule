@@ -1,42 +1,40 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 51,
+  "bottomRow": 54,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
-  "buttonStyle": "PRIMARY",
-  "buttonVariant": "SECONDARY",
+  "buttonColor": "#15803d",
+  "buttonStyle": "PRIMARY_BUTTON",
+  "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": false,
   "dynamicBindingPathList": [
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "buttonColor"
     }
   ],
+  "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
     }
   ],
   "iconAlign": "left",
-  "iconName": "cross",
+  "iconName": "floppy-disk",
   "isDefaultClickDisabled": true,
   "isDisabled": false,
   "isLoading": false,
   "isVisible": true,
   "key": "04er84layp",
-  "leftColumn": 24,
+  "leftColumn": 48,
   "minWidth": 120,
   "mobileBottomRow": 22,
-  "mobileLeftColumn": 31,
-  "mobileRightColumn": 47,
+  "mobileLeftColumn": 47,
+  "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(edit_modal.name);}}",
-  "originalBottomRow": 51,
-  "originalTopRow": 47,
+  "onClick": "{{update_schedule_entry.run().then(() => {\n  showAlert('Update successful!', 'success');\n  get_schedule.run();\n  closeModal(edit_modal.name);\n}).catch(() => {\n  showAlert('Failed to update', 'error');\n});}}",
+  "originalBottomRow": 54,
+  "originalTopRow": 50,
   "parentColumnSpace": 2.32421875,
   "parentId": "gd89vvxbgt",
   "parentRowSpace": 10,
@@ -45,11 +43,11 @@
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "hug",
-  "rightColumn": 42,
-  "text": "Close",
-  "topRow": 47,
+  "rightColumn": 62,
+  "text": "Save",
+  "topRow": 50,
   "type": "BUTTON_WIDGET",
   "version": 1,
-  "widgetId": "g9uc8vc83n",
-  "widgetName": "Close_Button"
+  "widgetId": "0qvv80odzs",
+  "widgetName": "Save_Button"
 }

@@ -173,8 +173,10 @@
   "mobileRightColumn": 34,
   "mobileTopRow": 0,
   "needsErrorInfo": false,
+  "originalBottomRow": 107,
+  "originalTopRow": 16,
   "parentColumnSpace": 20.25,
-  "parentId": "0",
+  "parentId": "zc40eptqqr",
   "parentRowSpace": 10,
   "primaryColumns": {
     "barcode_number": {
@@ -722,7 +724,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 64,
   "searchKey": "",
-  "tableData": "{{get_schedule.data}}",
+  "tableData": "{{\n  (() => {\n    const allData = get_schedule.data;\n    if (!allData) {\n      // Return an empty array if data is not yet loaded to prevent errors.\n      return [];\n    }\n    // Filter for rows that are not archived.\n    return allData.filter(row => row.is_archived === false);\n  })()\n}}\n",
   "textSize": "0.875rem",
   "topRow": 0,
   "totalRecordsCount": 0,
