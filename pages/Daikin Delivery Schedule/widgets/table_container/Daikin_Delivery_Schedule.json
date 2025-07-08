@@ -43,6 +43,7 @@
     "qty_despatched",
     "barcode_number",
     "wh_despatch_date",
+    "delivery_date",
     "delivery_notes",
     "despatch_confirmed",
     "date_despatch_confirmed",
@@ -50,7 +51,7 @@
     "created_at",
     "updated_at"
   ],
-  "columnUpdatedAt": 1751896065147,
+  "columnUpdatedAt": 1751962981715,
   "columnWidthMap": {
     "barcode_number": 180,
     "customColumn1": 115,
@@ -140,6 +141,9 @@
     },
     {
       "key": "primaryColumns.date_despatch_confirmed.computedValue"
+    },
+    {
+      "key": "primaryColumns.delivery_date.computedValue"
     }
   ],
   "dynamicPropertyPathList": [
@@ -338,6 +342,40 @@
       "originalId": "date_despatch_confirmed",
       "outputFormat": "DD/MM/YYYY HH:mm",
       "sticky": "",
+      "textSize": "0.875rem",
+      "thousandSeparator": true,
+      "validation": {},
+      "verticalAlignment": "CENTER",
+      "width": 150
+    },
+    "delivery_date": {
+      "alias": "delivery_date",
+      "allowCellWrapping": false,
+      "allowSameOptionsInNewRow": true,
+      "cellBackground": "",
+      "columnType": "text",
+      "computedValue": "{{(() => { const tableData = Daikin_Delivery_Schedule.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"delivery_date\"])) : delivery_date })()}}",
+      "currencyCode": "USD",
+      "decimals": 0,
+      "enableFilter": true,
+      "enableSort": true,
+      "fontStyle": "",
+      "horizontalAlignment": "LEFT",
+      "id": "delivery_date",
+      "index": 16,
+      "isCellEditable": false,
+      "isCellVisible": true,
+      "isDerived": false,
+      "isDisabled": false,
+      "isDiscardVisible": true,
+      "isEditable": false,
+      "isSaveVisible": true,
+      "isVisible": true,
+      "label": "Delivery Date",
+      "notation": "standard",
+      "originalId": "delivery_date",
+      "sticky": "",
+      "textColor": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,
       "validation": {},

@@ -2,13 +2,12 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 52,
-  "bottomRowBeforeCollapse": 44,
+  "bottomRow": 33,
   "boxShadow": "none",
   "closeOnSelection": true,
   "dateFormat": "YYYY-MM-DD HH:mm",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{ Daikin_Delivery_Schedule.triggeredRow.date_despatch_confirmed }}",
+  "defaultDate": "{{ Daikin_Delivery_Schedule.triggeredRow.delivery_date }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -18,47 +17,41 @@
     },
     {
       "key": "defaultDate"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicHeight": "FIXED",
   "dynamicPropertyPathList": [
     {
       "key": "defaultDate"
-    },
-    {
-      "key": "isVisible"
     }
   ],
   "dynamicTriggerPathList": [],
   "firstDayOfWeek": 0,
-  "isDisabled": true,
+  "isDisabled": false,
   "isLoading": false,
   "isRequired": false,
-  "isVisible": "{{ ConfirmSwitch.isSwitchedOn }}",
+  "isVisible": true,
   "key": "96jrc8ewzn",
-  "label": "Date Despatch Confirmed",
+  "label": "Delivery Date",
   "labelAlignment": "left",
   "labelPosition": "Top",
   "labelStyle": "BOLD",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 24,
+  "leftColumn": 0,
   "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 49,
-  "mobileLeftColumn": 1,
-  "mobileRightColumn": 21,
-  "mobileTopRow": 42,
+  "mobileBottomRow": 25,
+  "mobileLeftColumn": 0,
+  "mobileRightColumn": 20,
+  "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "originalBottomRow": 52,
-  "originalTopRow": 45,
-  "parentColumnSpace": 8.696874999999999,
+  "originalBottomRow": 33,
+  "originalTopRow": 26,
+  "parentColumnSpace": 19.228125,
   "parentId": "gd89vvxbgt",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
@@ -66,10 +59,9 @@
   "rightColumn": 63,
   "shortcuts": false,
   "timePrecision": "minute",
-  "topRow": 45,
-  "topRowBeforeCollapse": 37,
+  "topRow": 26,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "7qem1j1luf",
-  "widgetName": "Date_Despatch_Confirmed"
+  "widgetId": "wixjd36gxk",
+  "widgetName": "Delivery_Date"
 }
