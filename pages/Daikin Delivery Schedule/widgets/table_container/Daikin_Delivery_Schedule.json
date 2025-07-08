@@ -35,13 +35,13 @@
     "customColumn1",
     "order_date",
     "wh_despatch_date",
+    "delivery_date",
     "daikin_order_no",
     "wh_order_no",
     "product_code",
     "qty_ordered",
     "qty_despatched",
     "barcode_number",
-    "delivery_date",
     "labels_done",
     "booking_reference",
     "delivery_notes",
@@ -52,7 +52,7 @@
     "id",
     "unique_id"
   ],
-  "columnUpdatedAt": 1751969392063,
+  "columnUpdatedAt": 1751971469416,
   "columnWidthMap": {
     "barcode_number": 155,
     "booking_reference": 172,
