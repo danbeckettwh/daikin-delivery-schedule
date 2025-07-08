@@ -45,8 +45,6 @@
     "wh_despatch_date",
     "delivery_date",
     "delivery_notes",
-    "despatch_confirmed",
-    "date_despatch_confirmed",
     "is_archived",
     "created_at",
     "updated_at",
@@ -54,7 +52,7 @@
     "booking_reference",
     "date_labels_done"
   ],
-  "columnUpdatedAt": 1751963368942,
+  "columnUpdatedAt": 1751964578636,
   "columnWidthMap": {
     "barcode_number": 180,
     "customColumn1": 115,
@@ -138,12 +136,6 @@
     },
     {
       "key": "primaryColumns.customColumn1.boxShadow"
-    },
-    {
-      "key": "primaryColumns.despatch_confirmed.computedValue"
-    },
-    {
-      "key": "primaryColumns.date_despatch_confirmed.computedValue"
     },
     {
       "key": "primaryColumns.delivery_date.computedValue"
@@ -362,38 +354,6 @@
       "verticalAlignment": "CENTER",
       "width": 150
     },
-    "date_despatch_confirmed": {
-      "alias": "date_despatch_confirmed",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "date",
-      "computedValue": "{{(() => { const tableData = Daikin_Delivery_Schedule.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"date_despatch_confirmed\"])) : date_despatch_confirmed })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "date_despatch_confirmed",
-      "index": 15,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Date Despatch Confirmed",
-      "notation": "standard",
-      "originalId": "date_despatch_confirmed",
-      "outputFormat": "DD/MM/YYYY HH:mm",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
     "date_labels_done": {
       "alias": "date_labels_done",
       "allowCellWrapping": false,
@@ -486,37 +446,6 @@
       "label": "Delivery Notes",
       "notation": "standard",
       "originalId": "delivery_notes",
-      "sticky": "",
-      "textSize": "0.875rem",
-      "thousandSeparator": true,
-      "validation": {},
-      "verticalAlignment": "CENTER",
-      "width": 150
-    },
-    "despatch_confirmed": {
-      "alias": "despatch_confirmed",
-      "allowCellWrapping": false,
-      "allowSameOptionsInNewRow": true,
-      "columnType": "checkbox",
-      "computedValue": "{{(() => { const tableData = Daikin_Delivery_Schedule.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => (currentRow[\"despatch_confirmed\"])) : despatch_confirmed })()}}",
-      "currencyCode": "USD",
-      "decimals": 0,
-      "enableFilter": true,
-      "enableSort": true,
-      "horizontalAlignment": "LEFT",
-      "id": "despatch_confirmed",
-      "index": 14,
-      "isCellEditable": false,
-      "isCellVisible": true,
-      "isDerived": false,
-      "isDisabled": false,
-      "isDiscardVisible": true,
-      "isEditable": false,
-      "isSaveVisible": true,
-      "isVisible": true,
-      "label": "Despatch Confirmed",
-      "notation": "standard",
-      "originalId": "despatch_confirmed",
       "sticky": "",
       "textSize": "0.875rem",
       "thousandSeparator": true,

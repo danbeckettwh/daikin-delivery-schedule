@@ -3,17 +3,8 @@ UPDATE public.daikin_delivery_schedule
     wh_despatch_date = {{ WH_Dispatch_Date.selectedDate || NULL }},
     delivery_date = {{ Delivery_Date.selectedDate || NULL }},
     delivery_notes = {{ Delivery_Notes.text || NULL }},
-    despatch_confirmed = {{ ConfirmSwitch.isSwitchedOn }},
+		booking_reference = {{ Booking_Reference.text || NULL }},
     labels_done = {{ Labels_Done.isSwitchedOn }},
-    date_despatch_confirmed = 
-      CASE
-        -- If the switch is ON and the date was not previously set, set it to now().
-        WHEN {{ ConfirmSwitch.isSwitchedOn }} = true AND date_despatch_confirmed IS NULL THEN now()
-        -- If the switch is OFF, clear the date.
-        WHEN {{ ConfirmSwitch.isSwitchedOn }} = false THEN NULL
-        -- Otherwise (switch is ON and date is already set), keep the existing date.
-        ELSE date_despatch_confirmed
-      END, -- Added the missing comma
     date_labels_done = 
       CASE
         -- If the switch is ON and the date was not previously set, set it to now().
