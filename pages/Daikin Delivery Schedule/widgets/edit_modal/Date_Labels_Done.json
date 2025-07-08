@@ -8,7 +8,7 @@
   "closeOnSelection": true,
   "dateFormat": "YYYY-MM-DD HH:mm",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{ Daikin_Delivery_Schedule.triggeredRow.date_despatch_confirmed }}",
+  "defaultDate": "{{ Daikin_Delivery_Schedule.triggeredRow.date_labels_done }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
@@ -45,7 +45,7 @@
   "labelStyle": "BOLD",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 34,
   "maxDate": "2121-12-31T18:29:00.000Z",
   "maxDynamicHeight": 9000,
   "minDate": "1920-12-31T18:30:00.000Z",
@@ -63,13 +63,13 @@
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 23,
+  "rightColumn": 57,
   "shortcuts": false,
   "timePrecision": "minute",
   "topRow": 50,
   "topRowBeforeCollapse": 37,
   "type": "DATE_PICKER_WIDGET2",
   "version": 2,
-  "widgetId": "7qem1j1luf",
-  "widgetName": "Date_Despatch_Confirmed"
+  "widgetId": "0zq6wdc866",
+  "widgetName": "Date_Labels_Done"
 }
