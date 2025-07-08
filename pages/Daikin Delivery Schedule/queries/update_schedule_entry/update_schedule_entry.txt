@@ -1,6 +1,5 @@
 UPDATE public.daikin_delivery_schedule
   SET
-    wh_despatch_date = {{ WH_Dispatch_Date.selectedDate || NULL }},
     delivery_date = {{ Delivery_Date.selectedDate || NULL }},
     delivery_notes = {{ Delivery_Notes.text || NULL }},
 		booking_reference = {{ Booking_Reference.text || NULL }},

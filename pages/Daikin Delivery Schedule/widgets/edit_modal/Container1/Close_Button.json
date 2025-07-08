@@ -34,7 +34,7 @@
   "mobileRightColumn": 47,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{closeModal(edit_modal.name);}}",
+  "onClick": "{{closeModal(edit_modal.name).then(() => {\n  get_schedule.run();\n});}}",
   "originalBottomRow": 64,
   "originalTopRow": 60,
   "parentColumnSpace": 2.32421875,
