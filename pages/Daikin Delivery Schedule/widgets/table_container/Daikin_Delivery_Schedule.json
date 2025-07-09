@@ -52,7 +52,7 @@
     "id",
     "unique_id"
   ],
-  "columnUpdatedAt": 1751971469416,
+  "columnUpdatedAt": 1752048860132,
   "columnWidthMap": {
     "barcode_number": 155,
     "booking_reference": 172,
@@ -401,7 +401,7 @@
       "allowSameOptionsInNewRow": true,
       "cellBackground": "",
       "columnType": "date",
-      "computedValue": "{{(() => { const tableData = Daikin_Delivery_Schedule.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ( moment(currentRow.delivery_date).format('DD/MM/YYYY HH:mm'))) :  moment(currentRow.delivery_date).format('DD/MM/YYYY HH:mm') })()}}",
+      "computedValue": "{{(() => { const tableData = Daikin_Delivery_Schedule.processedTableData || []; return tableData.length > 0 ? tableData.map((currentRow, currentIndex) => ((currentRow.delivery_date))) : (currentRow.delivery_date) })()}}",
       "currencyCode": "USD",
       "decimals": 0,
       "enableFilter": true,
@@ -410,7 +410,7 @@
       "horizontalAlignment": "LEFT",
       "id": "delivery_date",
       "index": 16,
-      "inputFormat": "YYYY-MM-DD HH:mm",
+      "inputFormat": "YYYY-MM-DD hh:mm:ss",
       "isCellEditable": false,
       "isCellVisible": true,
       "isDerived": false,
