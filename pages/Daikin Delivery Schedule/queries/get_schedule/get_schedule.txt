@@ -1,2 +1,21 @@
-SELECT * FROM public.daikin_delivery_schedule
-ORDER BY delivery_date, wh_order_no;
+SELECT
+    -- Select all columns from the original daikin table
+    dds.*,
+    
+    -- And join in the LIVE, up-to-date status from the central despatch_plans table
+    dp.carrier,
+    dp.is_booked_in,
+    dp.ready_to_book,
+    dp.on_hold,
+    dp.cased_and_ready_to_pack,
+    dp.palletised
+    
+FROM 
+    public.daikin_delivery_schedule dds
+
+-- LEFT JOIN to our central despatch_plans table
+LEFT JOIN public.production_schedule ps ON dds.unique_id = ps."UniqueID"
+LEFT JOIN public.despatch_plans dp ON ps.id = dp.production_schedule_id
+
+ORDER BY 
+    dds.delivery_date, dds.wh_order_no;

@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "SELECT * FROM public.daikin_delivery_schedule\nORDER BY delivery_date, wh_order_no;",
+      "body": "SELECT\n    -- Select all columns from the original daikin table\n    dds.*,\n    \n    -- And join in the LIVE, up-to-date status from the central despatch_plans table\n    dp.carrier,\n    dp.is_booked_in,\n    dp.ready_to_book,\n    dp.on_hold,\n    dp.cased_and_ready_to_pack,\n    dp.palletised\n    \nFROM \n    public.daikin_delivery_schedule dds\n\n-- LEFT JOIN to our central despatch_plans table\nLEFT JOIN public.production_schedule ps ON dds.unique_id = ps.\"UniqueID\"\nLEFT JOIN public.despatch_plans dp ON ps.id = dp.production_schedule_id\n\nORDER BY \n    dds.delivery_date, dds.wh_order_no;",
       "encodeParamsToggle": true,
       "paginationType": "NONE",
       "pluginSpecifiedTemplates": [
