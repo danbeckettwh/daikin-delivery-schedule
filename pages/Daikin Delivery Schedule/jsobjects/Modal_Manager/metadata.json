@@ -1,0 +1,11 @@
+{
+  "gitSyncId": "686bbf135dd1861a2c0bf90b_db3377a1-11cf-4204-8530-630ea4d4db70",
+  "id": "Daikin Delivery Schedule_Modal_Manager",
+  "unpublishedCollection": {
+    "name": "Modal_Manager",
+    "pageId": "Daikin Delivery Schedule",
+    "pluginId": "js-plugin",
+    "pluginType": "JS",
+    "variables": []
+  }
+}

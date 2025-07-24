@@ -1,0 +1,11 @@
+-- This query specifically handles the Labels Done status on the PRODUCTION_SCHEDULE table.
+UPDATE public.production_schedule
+SET
+  "Labels Done" = {{ Labels_Done.isSwitchedOn }},
+  "Labels Done Date" = 
+    CASE
+      WHEN {{ Labels_Done.isSwitchedOn }} = true AND "Labels Done Date" IS NULL THEN now()
+      WHEN {{ Labels_Done.isSwitchedOn }} = false THEN NULL
+      ELSE "Labels Done Date"
+    END
+WHERE "UniqueID" = '{{ Daikin_Delivery_Schedule.triggeredRow.unique_id }}';

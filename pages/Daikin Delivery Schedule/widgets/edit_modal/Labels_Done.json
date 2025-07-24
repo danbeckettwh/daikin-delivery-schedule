@@ -4,7 +4,7 @@
   "animateLoading": true,
   "bottomRow": 49,
   "boxShadow": "none",
-  "defaultSwitchState": "{{ Daikin_Delivery_Schedule.triggeredRow.date_labels_done ?? ''}}",
+  "defaultSwitchState": "{{ appsmith.store.daikinModalItem.date_labels_done ?? ''}}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

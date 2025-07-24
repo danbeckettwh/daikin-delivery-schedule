@@ -8,7 +8,7 @@
   "closeOnSelection": true,
   "dateFormat": "YYYY-MM-DD HH:mm",
   "datePickerType": "DATE_PICKER",
-  "defaultDate": "{{ Daikin_Delivery_Schedule.triggeredRow.date_labels_done }}",
+  "defaultDate": "{{ appsmith.store.daikinModalItem.date_labels_done }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

@@ -5,7 +5,7 @@
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 44,
   "boxShadow": "none",
-  "defaultText": "{{ Daikin_Delivery_Schedule.triggeredRow.delivery_notes ?? '' }}",
+  "defaultText": "{{ appsmith.store.daikinModalItem.delivery_notes ?? '' }}",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"

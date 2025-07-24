@@ -12,7 +12,11 @@
       "key": "borderRadius"
     }
   ],
-  "dynamicPropertyPathList": [],
+  "dynamicPropertyPathList": [
+    {
+      "key": "onClick"
+    }
+  ],
   "dynamicTriggerPathList": [
     {
       "key": "onClick"
@@ -32,7 +36,7 @@
   "mobileRightColumn": 63,
   "mobileTopRow": 18,
   "needsErrorInfo": false,
-  "onClick": "{{update_schedule_entry.run().then(() => {\n  showAlert('Update successful!', 'success');\n  get_schedule.run();\n  closeModal(edit_modal.name);\n}).catch(() => {\n  showAlert('Failed to update', 'error');\n});}}",
+  "onClick": "{{\n  Promise.all([\n    update_schedule_entry.run(),\n    update_labels_done_status.run()\n  ]).then(() => {\n    showAlert('Daikin schedule updated successfully!', 'success');\n    // Add your table refresh query here, e.g., get_daikin_schedule.run()\n  }).catch(() => {\n    showAlert('Failed to update schedule.', 'error');\n  })\n}}",
   "originalBottomRow": 64,
   "originalTopRow": 60,
   "parentColumnSpace": 2.32421875,
